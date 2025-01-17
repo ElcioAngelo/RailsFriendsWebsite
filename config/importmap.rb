@@ -5,3 +5,10 @@ pin "@hotwired/turbo-rails", to: "turbo.min.js"
 pin "@hotwired/stimulus", to: "stimulus.min.js"
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
+
+# config/importmap.rb
+pin "controllers", to: "controllers/index.js"
+pin "rails-ujs", to: "rails-ujs.min.js" # Ensure it's pinned
+
+# Add this at the end to initialize Rails UJS
+pin "@rails/ujs", to: "rails-ujs.js"
